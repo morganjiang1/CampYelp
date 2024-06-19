@@ -23,15 +23,15 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-primary py-3 d-none d-md-block">
+    <div class="container-fluid bg-primary py-3">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-left mb-2 mb-md-0">
                     <div class="d-inline-flex align-items-center">
                         <a class="text-white pr-3" href="">FAQs</a>
                         <span class="text-white">|</span>
@@ -40,7 +40,10 @@
                         <a class="text-white pl-3" href="">Support</a>
                     </div>
                 </div>
-                <div class="col-md-6 text-center text-lg-right">
+                <div class="col-md-4 text-center">
+                    <h1 class="m-0 text-white"><span class="text-secondary">FriendFerrals</span></h1>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
                     <div class="d-inline-flex align-items-center">
                         <a class="text-white px-3" href="">
                             <i class="fab fa-facebook-f"></i>
@@ -52,10 +55,10 @@
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a class="text-white px-3" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-white pl-3" href="">
                             <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
@@ -64,14 +67,10 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
-                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Yokie's</span>Yogurt</h1>
-                </a>
+            <nav class="navbar navbar-expand-lg navbar-light shadow p-lg-0">
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -81,9 +80,6 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="product.html" class="nav-item nav-link">Product</a>
                     </div>
-                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Yokie's</span>Yogurt</h1>
-                    </a>
                     <div class="navbar-nav mr-auto py-0">
                         <a href="service.html" class="nav-item nav-link">Commitments</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
@@ -94,6 +90,65 @@
         </div>
     </div>
     <!-- Navbar End -->
+</body>
+
+<!--Chatbot Start-->
+<div class="container">
+    <h1>Referral System</h1>
+    <div class="input-section">
+        <h2>Add Contact</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="phone" placeholder="Phone" required>
+            <input type="text" id="interests" placeholder="Interests (comma separated)" required>
+            <input type="number" id="trust-level" placeholder="Trust Level (1-5)" required>
+            <textarea id="past-interactions" placeholder="Past Interactions (comma separated)" required></textarea>
+            <button type="submit">Add Contact</button>
+        </form>
+    </div>
+    <div class="business-section">
+        <h2>Get Referrals</h2>
+        <input type="text" id="business-type" placeholder="Business Type" required>
+        <button id="get-referrals">Get Referrals</button>
+    </div>
+    <div class="results-section">
+        <h2>Top Referrals</h2>
+        <ul id="referral-list"></ul>
+    </div>
+    <div class="chatbot-section">
+        <h2>Chatbot</h2>
+        <div class="chat-window" id="chat-window"></div>
+        <input type="text" id="chat-input" placeholder="Ask about businesses..." />
+        <button id="send-chat">
+            <span id="button-text">Send</span>
+            <div id="loading-spinner" class="spinner hidden"></div>
+        </button>
+        <div id="success-message" class="hidden">Message sent!</div>
+        <div id="image-result" class="hidden">
+            <img id="result-image" src="" alt="Result Image">
+        </div>
+    </div>
+    <div class="search-section">
+        <h2>Search the Web</h2>
+        <script async src="https://cse.google.com/cse.js?cx=630d33bb369604bb1"></script>
+        <div class="gcse-search"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+
+<!--Chatbot End-->
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Carousel Start -->
@@ -516,7 +571,7 @@
             <div class="row">
                 <div class="col-12 mb-4">
                     <a href="index.html" class="navbar-brand m-0">
-                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">Friend</span>Ferrals</h1>
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">Yokie's</span>Yogurt</h1>
                     </a>
                 </div>
                 <div class="col-12 mb-4">
@@ -524,6 +579,19 @@
                     <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
+                            <p class="mb-2">San Jose State University, California </p>
+                            <p class="mb-0">+1 (510)-946-7193</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
+                            <p class="mb-2">In Person or Through Phone</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12">
                     <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. 
